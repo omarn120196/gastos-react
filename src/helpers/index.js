@@ -4,3 +4,15 @@ export const generarID = ()=>{
 
     return random + fecha;
 }
+
+export const formatearFecha = fecha=>{
+    const nuevaFecha = new Date(fecha);
+
+    const opciones = {
+        year: 'numeric',
+        month: 'long',
+        day: '2-digit'
+    }
+
+    return nuevaFecha.toLocaleDateString('es-Es', opciones);
+}
