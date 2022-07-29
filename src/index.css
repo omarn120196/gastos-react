@@ -245,6 +245,7 @@ main {
     font-size: 3rem;
     font-weight: 900;
     color: var(--gris-oscuro);
+    width: 50%;
 }
 .filtros select {
     flex: 1;
@@ -253,6 +254,7 @@ main {
     border-radius: 1rem;
     text-align: center;
     background-color: var(--gris-claro);
+    width: 100%;
 }
 
 .listado-gastos {
@@ -348,6 +350,7 @@ main {
     top: 3rem;
     width: 3rem;
     height: 3rem;
+    z-index: 10;
 }
 .modal .cerrar-modal img {
     width: 100%;
@@ -355,11 +358,17 @@ main {
 
 .modal .formulario {
     max-width: 80rem;
-    width: 40rem;
+    width: 90%;
     transition-property: all;
     transition-duration: 300ms;
     transition-timing-function: ease-in;
     opacity: 0;
+}
+
+@media (min-width: 475px) {
+    .modal .formulario {
+        width: 40rem;
+    }
 }
 .modal label {
     color: var(--blanco);
